@@ -1,1 +1,82 @@
-/*Maak hier jouw CSS!*/
+.body {
+    row-gap: 16px;
+    column-gap: 16px;
+    padding: 16px;
+    margin: fill;
+}
+
+.grid-container {
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    padding: 16px;
+    margin: auto;
+    background-color: #FFC4C4;
+    grid-template-columns: [first] 250px [line2] 250px [line3] 250px [end];
+    grid-template-rows: [row1-start] 50px [row1-end] 190px [row2-start] 100px [row2-end] 200px [row3] 50px [last-line];
+}
+
+.grid-container > div {
+    display: grid;
+    background-color: #D04545;
+    justify-content: center;
+    padding: 20px;
+    font-family: "Times New Roman";
+    font-size: 24px;
+    color: #ffffff;
+}
+
+#item1 {
+    display: grid;
+    grid-column-start: first;
+    grid-column-end: line2;
+    grid-row-start: row1-start;
+    grid-row-end: row1-end;
+    grid-column: 50px;
+    text-align: center;
+}
+
+#item2 {
+    display: grid;
+    grid-column-start: first;
+    grid-column-end: line2;
+    grid-row-start: row1-end;
+    grid-row-end: row3;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: stretch;
+}
+
+#item3 {
+    display: grid;
+    grid-column-start: line2;
+    grid-column-end: end;
+    grid-row-start: row1-start;
+    grid-row-end: row2-end;
+    grid-column: 240px;
+}
+
+#item4 {
+    display: grid;
+    grid-column-start: line3;
+    grid-column-end: end;
+    grid-row-start: row2-end;
+    grid-row-end: row3;
+    grid-column: 100px;
+}
+
+#item5 {
+    display: grid;
+    grid-column-start: line2;
+    grid-column-end: line3;
+    grid-row-start: row2-end;
+    grid-row-end: row3;
+}
+
+#item6 {
+    display: grid;
+    grid-column-start: first;
+    grid-column-end: end;
+    grid-row-start: row3;
+    grid-row-end: row3;
+}
