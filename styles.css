@@ -1,3 +1,5 @@
+@media screen and (min-width: 1200px)
+
 .body {
     row-gap: 16px;
     column-gap: 16px;
@@ -6,23 +8,23 @@
 }
 
 .grid-container {
-    display: grid;
-    row-gap: 16px;
-    column-gap: 16px;
+    display: inline-grid;
+    align-items: stretch;
+    gap: 16px;
     padding: 16px;
     margin: auto;
     background-color: #FFC4C4;
-    grid-template-columns: [first] 250px [line2] 250px [line3] 250px [end];
-    grid-template-rows: [row1-start] 50px [row1-end] 190px [row2-start] 100px [row2-end] 200px [row3] 50px [last-line];
+    align-self: center;
+    grid-template-columns: [first] 300px [line2] 300px [line3] 300px [end];
+    grid-template-rows: [row1-start] 50px [row1-end] auto [row2-start] 100px [row2-end] 200px [row3] 50px [last-line];
 }
 
 .grid-container > div {
-    display: grid;
     background-color: #D04545;
     justify-content: center;
+    align-content: center;
     padding: 20px;
     font-family: "Times New Roman";
-    font-size: 24px;
     color: #ffffff;
 }
 
@@ -33,7 +35,8 @@
     grid-row-start: row1-start;
     grid-row-end: row1-end;
     grid-column: 50px;
-    text-align: center;
+    font-size: 24px;
+    justify-items: center;
 }
 
 #item2 {
@@ -44,7 +47,8 @@
     grid-row-end: row3;
     padding-left: 20px;
     padding-right: 20px;
-    text-align: stretch;
+    font-size: 12px;
+    align-self: flex-start;
 }
 
 #item3 {
@@ -54,6 +58,8 @@
     grid-row-start: row1-start;
     grid-row-end: row2-end;
     grid-column: 240px;
+    font-size: 24px;
+    justify-items: center;
 }
 
 #item4 {
@@ -62,6 +68,7 @@
     grid-column-end: end;
     grid-row-start: row2-end;
     grid-row-end: row3;
+    font-size: 24px;
     grid-column: 100px;
 }
 
@@ -71,6 +78,8 @@
     grid-column-end: line3;
     grid-row-start: row2-end;
     grid-row-end: row3;
+    font-size: 24px;
+    justify-items: center;
 }
 
 #item6 {
@@ -79,4 +88,36 @@
     grid-column-end: end;
     grid-row-start: row3;
     grid-row-end: row3;
+    font-size: 24px;
 }
+
+@media screen and (min-width: 576px)
+
+    .body {
+        row-gap: 16px;
+        column-gap: 16px;
+        padding: 16px;
+        margin: fill;
+    }
+
+    .grid-container {
+        display: inline-grid;
+        align-items: stretch;
+        gap: 16px;
+        padding: 16px;
+        margin: auto;
+        background-color: #FFC4C4;
+        align-self: center;
+        grid-template-columns: [first] 300px [line2] 300px [line3] 300px [end];
+        grid-template-rows: [row1-start] 50px [row1-end] auto [row2-start] 100px [row2-end] 200px [row3] 50px [last-line];
+    }
+
+    .grid-container > div {
+        background-color: #D04545;
+        justify-content: center;
+        align-content: center;
+        padding: 20px;
+        font-family: "Times New Roman";
+        color: #ffffff;
+    }
+
